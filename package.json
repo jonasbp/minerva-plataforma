@@ -1,0 +1,27 @@
+{
+    "name": "Minerva-Site",
+        "version": "1.0.0",
+            "description": "Criação da plataforma Minerva afim de conectar mulheres",
+                "main": "app.js",
+                    "homepage": "https://github.com/RonanUFPa/minerva-plataforma"
+    "scripts": {
+        "test": "echo \"Error: no test especificado\" && exit1"
+    },
+    "author": "Minerva",
+        "license" : "",
+        "dependencies": {
+              "bcryptjs": "*",
+              "body-parser": "*",
+              "connect-flash": "*",
+              "cookie-parser": "1.4.1",
+              "express": "*",
+              "express-handlebars": "*",
+              "express-messages": "*",
+              "express-session": "*",
+              "express-validator": "*",
+              "mongodb": "*",
+              "mongoose": "*",
+              "passport": "*",
+              "passport-http": "*"
+    }
+}
