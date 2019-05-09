@@ -1,7 +1,7 @@
 {
-    "name": "Minerva-Site",
+    "name": "minerva-plataforma",
         "version": "1.0.0",
-            "description": "Criação da plataforma Minerva afim de conectar mulheres",
+            "description": "Repositório da aplicação web da plataforma de negocio social da Minerva",
                 "main": "app.js",
                     "homepage": "https://github.com/RonanUFPa/minerva-plataforma"
     "scripts": {
