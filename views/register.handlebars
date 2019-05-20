@@ -1,33 +1,82 @@
-<h2 class="page-header"> Register</h2>
-<form method="post" action="/users/register">
-     <div class="form-group">
-     <label> Name</label>
-     <input type="text" class="form-control" placeholder="Name"
-     name="name"></input>
-     
-     </div>
-     <div class="form-group">
-     <label> Username </label>
-     <input type="text" class="form-control" placeholder="Username" name="username">
-     </div>
+<!--
+Author: Colorlib
+Author URL: https://colorlib.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Creative Colorlib SignUp Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+</head>
+<body>
+	<!-- main -->
+    
+{{#if errors}}
+       {{#each errors}}
+         <div class="alert alert-danger"> {{msg}} </div>
+      {{/each}}
+ {{/if}}
 
 
-     <div class="form-group">
-     <label> Email </label>
-     <input type="email" class="form-control" placeholder="Email" name="email">
-     </div>
+	<div class="main-w3layouts wrapper">
+		<h1>Minerva Experience </h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="/users/register" method="post">
+                <label> Nome </label>
+                <input class="text" type="text" name="name" placeholder="Name">
 
+                 <label> Username </label>
 
-
-     <div class="form-group">
-     <label> Password </label>
-     <input type="password" class="form-control" placeholder="Password" name="password">
-     </div>
-
-     <div class="form-group">
-     <label> Confirm password </label>
-     <input type="password" class="form-control" placeholder="Password" name="password2">
-     </div>
-
-     <button type="submit" class="btn btn-default"> Submit</button>
-</form>
+                                <input class="text" type="text" name="username" placeholder="Username">
+                 <label> Email </label> 
+				<input class="text" type="email" name="email" placeholder="Email">
+		<label> Senha </label>			
+                   <input class="text" type="password" name="password" placeholder="Password">
+	           <label> Confirme a senha </label>			
+             	<input class="text w3lpass" type="password" name="password2" placeholder="Password">
+					<div class="wthree-text">
+						<label class="anim">
+							<input type="checkbox" class="checkbox" required="">
+							<span>Eu concordo com os termos e condições</span>
+						</label>
+						<div class="clear"> </div>
+					</div>
+					<input type="submit" value="registre-se">
+				</form>
+			
+			</div>
+		</div>
+		<!-- copyright -->
+		<div class="colorlibcopy-agile">
+			<p>© Minerva Experience </p>
+		</div>
+		<!-- //copyright -->
+<!--
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+-->
+	</div>
+	<!-- //main -->
+</body>
+</html>
