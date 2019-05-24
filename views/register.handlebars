@@ -1,25 +1,11 @@
-<!--
-Author: Colorlib
-Author URL: https://colorlib.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>Creative Colorlib SignUp Form</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Custom Theme files -->
-<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<!-- //Custom Theme files -->
-<!-- web font -->
-<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-<!-- //web font -->
+<link rel="stylesheet" href="/css/style.css" >
 </head>
 <body>
-	<!-- main -->
     
 {{#if errors}}
        {{#each errors}}
@@ -27,56 +13,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       {{/each}}
  {{/if}}
 
-
-	<div class="main-w3layouts wrapper">
-		<h1>Minerva Experience </h1>
-		<div class="main-agileinfo">
-			<div class="agileits-top">
+	<div class="login-box register-box">
+		<h1>Cadastro </h1>
 				<form action="/users/register" method="post">
-                <label> Nome </label>
-                <input class="text" type="text" name="name" placeholder="Name">
-
-                 <label> Username </label>
-
-                                <input class="text" type="text" name="username" placeholder="Username">
-                 <label> Email </label> 
-				<input class="text" type="email" name="email" placeholder="Email">
-		<label> Senha </label>			
-                   <input class="text" type="password" name="password" placeholder="Password">
+                <p> Nome </p>
+                <input type="text" name="name" placeholder="Name">
+                 <p> Username </p>
+                <input type="text" name="username" placeholder="Username">
+                 <p> Email </p> 
+                <input type="email" name="email" placeholder="Email">
+		<p> Senha </p>			
+                   <input type="password" name="password" placeholder="Password">
 	           <label> Confirme a senha </label>			
              	<input class="text w3lpass" type="password" name="password2" placeholder="Password">
-					<div class="wthree-text">
-						<label class="anim">
-							<input type="checkbox" class="checkbox" required="">
-							<span>Eu concordo com os termos e condições</span>
-						</label>
-						<div class="clear"> </div>
-					</div>
-					<input type="submit" value="registre-se">
-				</form>
-			
-			</div>
-		</div>
-		<!-- copyright -->
-		<div class="colorlibcopy-agile">
-			<p>© Minerva Experience </p>
-		</div>
-		<!-- //copyright -->
-<!--
-		<ul class="colorlib-bubbles">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
--->
+					
+		
+		<input type="checkbox" class="input_box" required="">
+			<span>Eu concordo com os termos e condições</span>
+				<p> </p>
+		<input type="submit" value="registre-se">
+</form>
+							
+</div>
+					
+				
+
+		
+
 	</div>
-	<!-- //main -->
+	
 </body>
 </html>
