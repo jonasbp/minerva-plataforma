@@ -3,7 +3,7 @@ const Joi = require('@hapi/joi').extend(require('joi-cpf-cnpj'));
 
 const app = express.Router();
 
-app.use(express.json());
+app.use(express.json()); 
 
 const UserField = Joi.object().keys({
     name: Joi.string().regex(/^[a-zA-Z]+$/).min(3).max(30).required(),
