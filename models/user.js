@@ -1,11 +1,11 @@
-var mongoose = require('mongoose')
-var bcrypt = require('bcrypt') //para o password
+const mongoose = require('mongoose')
+const bcrypt = require('bcryptjs') //para o password
 /*
 mongoose.connect('mongodb://localhost/loginapp')
 var db = mongoose.connection;
 não precisa disso se não vai ter duas conexoes com o banco
 */
-var UserSchema = mongoose.Schema({
+const UserSchema = mongoose.Schema({
     username: {
         type: String,
         index: true
@@ -21,9 +21,8 @@ var UserSchema = mongoose.Schema({
     }
 })
 
-var User = module.exports = mongoose.model('User', UserSchema)
-
-module.exports.createUser = function (newUser, callback) {
+let User = mongoose.model('User', UserSchema);
+User.createUser = function (newUser, callback) {
     bcrypt.genSalt(10, function (err, salt) {
         bcrypt.hash(newUser.password, salt, function (err, hash) {
             newUser.password = hash
@@ -31,3 +30,4 @@ module.exports.createUser = function (newUser, callback) {
         });
     });
 }
+module.exports = User;

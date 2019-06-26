@@ -1,19 +1,15 @@
-var express = require('express')
-var path = require('path')
-//var cookieParser = require('cookie-parser') não é mais necessario na versao do node
-var bodyParser = require('body-parser')
-var exphbs = require('express-handlebars')
-var expressValidator = require('express-validator')
-var flash = require('connect-flash')
-var session = require('express-session')
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
-var mongo = require('mongodb');
-var mongoose = require('mongoose');
+const express = require('express')
+const path = require('path')
+//const cookieParser = require('cookie-parser') não é mais necessario na versao do node
+const bodyParser = require('body-parser')
+const exphbs = require('express-handlebars')
+const expressValidator = require('express-validator')
+const flash = require('connect-flash')
+const session = require('express-session')
+const passport = require('passport');
+const mongoose = require('mongoose');
+
 mongoose.connect('mongodb://localhost/loginapp',{ useNewUrlParser: true});
-var db = mongoose.connection
-//var routes = require('routes');
-//var routes = require('./routes');
 /*
 mongo
 use loginapp
@@ -24,12 +20,27 @@ db.createCollection('users');
 show collections -> tem que mostrar users
 */
 //Aqui vamos iniciar o app e vamos definir duas variaveis
-var app = express();
-var routes = require('./routes/index');
-var users = require('./routes/users');
+const app = express();
+const routes = require('./routes/index');
+const users = require('./routes/users');
 // nessa parte definimos o nome do diretorio para o layout atual e vamos usar o visual com handlebars
 // pra isso dizemos a engina para usar handlebars
 app.set('views', path.join(__dirname, 'views'));
+app.use(expressValidator({
+    errorFormatter: function(param, msg, value){
+        var namespace = param.split('.')
+        , root = namespace.shift()
+        , formParam = root;
+        while(namespace.length) {
+            formParam += '[' + namespace.shift() + ']';
+        }
+        return {
+            param : formParam,
+            msg   : msg,
+            value : value
+        };
+    }
+}));
 app.engine('handlebars', exphbs({defaultLayout: 'layout'}));
 app.set('view engine', 'handlebars');
 
@@ -54,21 +65,7 @@ app.use(passport.session());
 //O validador express retirado do Digital Ocean, mas basicamente quer dizer:
 // separar uma string em substring para criar um array 
 //remove o ultimo elemento do array
-app.use(expressValidator({
-    errorFormatter: function(param, msg, value){
-        var namespace = param.split('.')
-        , root = namespace.shift()
-        , formParam = root;
-        while(namespace.length) {
-            formParam += '[' + namespace.shift() + ']';
-        }
-        return {
-            param : formParam,
-            msg   : msg,
-            value : value
-        };
-    }
-}));
+
 
 //Quase tudo na web usa flash
 app.use(flash());

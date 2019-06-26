@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-
-var User = require('../models/user')
+const express = require('express');
+const router = express.Router();
+const {check, validationResult} = require("express-validator");
+const User = require('../models/user');
 
 // Register
 router.get('/register', function(req,res){
@@ -15,12 +15,7 @@ router.get('/login', function(req,res){
 
 
 router.post('/register', function(req,res){
-    var name = req.body.name
-    var email = req.body.email
-    var username = req.body.username
-    var password = req.body.password
-    var password = req.body.password2
-    //até aqui funcionou
+    const {name, email, username, password, password2} = req.body;
     //validation
     req.checkBody('name','Name is required').notEmpty()
     req.checkBody('email','Email is required').notEmpty()
@@ -29,26 +24,26 @@ router.post('/register', function(req,res){
     req.checkBody('password','Password is required').notEmpty()
     req.checkBody('password2','Password do not match').equals(req.body.password)
     
-    var errors = req.validationErrors()
+    const errors = req.validationErrors()
     if(errors){
-      res.render('register',{
-           errors:errors
-      })
+        req.flash("error_msg", errors);
+        res.render('register',{
+            errors:errors
+        });
     } else{
-            console.log('Passed')
-            var newUser = new User({
-                 name: name,
-                 email:email,
-                 username: username,
-                 password: password
-            })
-
+            console.log("Criando Usuario...")
+            let newUser = new User({
+                name: name,
+                email:email,
+                username: username,
+                password: password
+            });
             User.createUser(newUser,function(err,user){
                  if(err) throw err;
-                 console.log(user)
-            })
-            req.flash('success_msg','Registrado com sucesso')
-            res.redirect('/users/login')
+                 console.log("Usuario Criado: "+ user);
+            });
+            req.flash('success_msg','Registrado com sucesso');
+            res.redirect('/users/login');
     }
 })
 

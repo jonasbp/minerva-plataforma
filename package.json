@@ -1,27 +1,27 @@
 {
     "name": "minerva-plataforma",
-        "version": "1.0.0",
-            "description": "Repositório da aplicação web da plataforma de negocio social da Minerva",
-                "main": "app.js",
-                    "homepage": "https://github.com/RonanUFPa/minerva-plataforma"
+    "version": "1.0.0",
+    "description": "Repositório da aplicação web da plataforma de negocio social da Minerva",
+    "main": "app.js",
+    "homepage": "https://github.com/RonanUFPa/minerva-plataforma",
     "scripts": {
         "test": "echo \"Error: no test especificado\" && exit1"
     },
     "author": "Minerva",
-        "license" : "",
-        "dependencies": {
-              "bcryptjs": "*",
-              "body-parser": "*",
-              "connect-flash": "*",
-              "cookie-parser": "1.4.1",
-              "express": "*",
-              "express-handlebars": "*",
-              "express-messages": "*",
-              "express-session": "*",
-              "express-validator": "*",
-              "mongodb": "*",
-              "mongoose": "*",
-              "passport": "*",
-              "passport-http": "*"
+    "license": "",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "*",
+        "connect-flash": "*",
+        "cookie-parser": "1.4.1",
+        "express": "*",
+        "express-handlebars": "*",
+        "express-messages": "*",
+        "express-session": "*",
+        "express-validator": "^5.2.0",
+        "mongoose": "*",
+        "passport": "*",
+        "passport-http": "*",
+        "passport-local": "^1.0.0"
     }
 }
