@@ -6,6 +6,6 @@
 ## Mesmo antes de ser lançada oficialmente, a Minerva já havia sido reconhecida pelo seu valor. A iniciativa nasceu durante a maior competição universitária de empreendedorismo do Estado do Pará, o Desafio Inove+, em 2017, situação em que conquistou o 3° lugar. 
 ## A Minerva possui também reconhecimento da Ford Motor Company Fund (Ford C3 Building Sustainable Communities) e da Renault, por meio da ## pré-aceleração no programa Renault Experience. ##
 
-
-[Para reportar um bug:](https://github.com/RonanUFPa/minerva-plataforma/blob/master/.github/ISSUE_TEMPLATE/bug_report.md)
+### Como Ajudar ###
+[Como reportar um Bug?](https://github.com/RonanUFPa/minerva-plataforma/blob/master/.github/ISSUE_TEMPLATE/bug_report.md)
 
