@@ -13,8 +13,7 @@
 ## Lincença
 [MIT License](https://github.com/afonsopacifer/open-source-boilerplate/blob/master/LICENSE.md) © [Minerva Reparos](http://minervareparos.com/)
 
-### Como Contribuir ###
-### Reportando um bug.###
-[Como reportar um Bug?](https://github.com/RonanUFPa/minerva-plataforma/blob/master/.github/ISSUE_TEMPLATE/bug_report.md)
-[Como ](https://github.com/afonsopacifer/open-source-boilerplate/blob/master/CONTRIBUTING.md).
+### Como Contribuir? ###
+[Reportanto um Bug.](https://github.com/RonanUFPa/minerva-plataforma/blob/master/.github/ISSUE_TEMPLATE/bug_report.md)
+[Programando.](https://github.com/afonsopacifer/open-source-boilerplate/blob/master/CONTRIBUTING.md).
 
