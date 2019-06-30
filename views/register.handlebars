@@ -1,46 +1,48 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Creative Colorlib SignUp Form</title>
-<link rel="stylesheet" href="/css/style.css" >
+	<title>Creative Colorlib SignUp Form</title>
+	<link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    
-{{#if errors}}
-       {{#each errors}}
-         <div class="alert alert-danger"> {{msg}} </div>
-      {{/each}}
- {{/if}}
+
+	{{#if errors}}
+	{{#each errors}}
+	<div class="alert alert-danger"> {{msg}} </div>
+	{{/each}}
+	{{/if}}
 
 	<div class="login-box register-box">
 		<h1>Cadastro </h1>
-				<form action="/users/register" method="post">
-                <p> Nome </p>
-                <input type="text" name="name" placeholder="Name">
-                 <p> Username </p>
-                <input type="text" name="username" placeholder="Username">
-                 <p> Email </p> 
-                <input type="email" name="email" placeholder="Email">
-		<p> Senha </p>			
-                   <input type="password" name="password" placeholder="Password">
-	           <label> Confirme a senha </label>			
-             	<input class="text w3lpass" type="password" name="password2" placeholder="Password">
-					
-		
-		<input type="checkbox" class="input_box" required="">
-			<span>Eu concordo com os termos e condições</span>
-				<p> </p>
-		<input type="submit" value="registre-se">
-</form>
-							
-</div>
-					
-				
+		<form action="/users/register" method="post">
+			<p> Nome </p>
+			<input type="text" name="name" placeholder="Name">
+			<p> Username </p>
+			<input type="text" name="username" placeholder="Username">
+			<p> Email </p>
+			<input type="email" name="email" placeholder="Email">
+			<p> Senha </p>
+			<input type="password" name="password" placeholder="Password">
+			<label> Confirme a senha </label>
+			<input class="text w3lpass" type="password" name="password2" placeholder="Password">
 
-		
+
+			<input type="checkbox" class="input_box" required="">
+			<span>Eu concordo com os termos e condições</span>
+			<p> </p>
+			<input type="submit" value="registre-se">
+		</form>
 
 	</div>
-	
+
+
+
+
+
+	</div>
+
 </body>
+
 </html>
