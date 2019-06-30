@@ -2,7 +2,7 @@
 Nome: 'Relatório de Bugs'
 Sobre: 'Criar um relatório para nos ajudar a melhorar a permoface da plataforma Minerva.'
 Titulo: 'NOME_DO_BUG-ENDEREÇO-DO-ARQUIVO'
-labels: 'BUG'
+labels: 'Tipo de Bug'
 User: '@Meu Nome'
 
 ---
