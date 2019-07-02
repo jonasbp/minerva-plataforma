@@ -6,7 +6,7 @@ var db = mongoose.connection;
 não precisa disso se não vai ter duas conexoes com o banco
 */
 const UserSchema = mongoose.Schema({
-   username: {
+      username: {
         type: String,
         required: true,
         index: true
@@ -17,15 +17,19 @@ const UserSchema = mongoose.Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        lowercase: true,
+        unique: true
     },
     password: {
         type: String,
-        required: true
+        required: true,
+        select: false
     },
     password2: {
         type: String,
-        required: true
+        required: true,
+        select: false
     },
     endereco: {
         type: String,
@@ -53,7 +57,9 @@ const UserSchema = mongoose.Schema({
     },
     cpf: {
         type: String,
-        required: true
+        required: true,
+        unique: true,
+        
     }
 });
 

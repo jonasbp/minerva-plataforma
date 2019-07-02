@@ -8,20 +8,27 @@
     "test": "echo \"Error: no test especificado\" && exit1"
   },
   "author": "Minerva",
-  "license": "",
+  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "*",
-    "connect-flash": "*",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "1.4.1",
     "express": "*",
-    "express-handlebars": "*",
+    "express-handlebars": "^3.1.0",
     "express-messages": "*",
-    "express-session": "*",
-    "express-validator": "^5.2.0",
+    "express-session": "^1.16.2",
+    "express-validator": "^5.3.1",
     "mongoose": "*",
-    "passport": "*",
+    "passport": "^0.4.0",
     "passport-http": "*",
     "passport-local": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RonanUFPa/minerva-plataforma.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RonanUFPa/minerva-plataforma/issues"
   }
 }
