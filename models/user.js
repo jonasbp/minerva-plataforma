@@ -6,7 +6,8 @@ var db = mongoose.connection;
 não precisa disso se não vai ter duas conexoes com o banco
 */
 const UserSchema = mongoose.Schema({
-      username: {
+    
+    username: {
         type: String,
         required: true,
         index: true
