@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs'); //para o password
-/*
-mongoose.connect('mongodb://localhost/loginapp')
-var db = mongoose.connection;
-não precisa disso se não vai ter duas conexoes com o banco
-*/
+
 const UserSchema = mongoose.Schema({
   username: {
     type: String,
