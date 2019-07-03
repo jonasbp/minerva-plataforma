@@ -17,13 +17,13 @@ router.post('/register', function(req, res) {
   const { name, email, username, password, password_confirm, age, endereco, phone_num, live_with, secret_word, isClient, cpf } = req.body;
   //validation
   req.checkBody('name', 'Name is required').notEmpty();
-  req.checkBody('age', 'Name is required').notEmpty();
-  req.checkBody('endereco', 'Name is required').notEmpty();
-  req.checkBody('phone_num', 'Name is required').notEmpty();
-  req.checkBody('live_with', 'Name is required').notEmpty();
-  req.checkBody('secret_word', 'Name is required').notEmpty();
-  req.checkBody('isClient', 'Name is required').notEmpty();
-  req.checkBody('cpf', 'Name is required').notEmpty();
+  req.checkBody('age', 'Age is required').notEmpty();
+  req.checkBody('endereco', 'Endereco is required').notEmpty();
+  req.checkBody('phone_num', 'Phone number is required').notEmpty();
+  req.checkBody('live_with', 'Live with is required').notEmpty();
+  req.checkBody('secret_word', 'Secret word is required').notEmpty();
+  req.checkBody('isClient', 'Is client is required').notEmpty();
+  req.checkBody('cpf', 'Cpf is required').notEmpty();
   req.checkBody('email', 'Email is required').notEmpty();
   req.checkBody('email', 'Email is not valid').isEmail();
   req.checkBody('username', 'Username is required').notEmpty();
