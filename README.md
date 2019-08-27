@@ -15,5 +15,6 @@
 
 ## Como Contribuir? 
 [Reportanto um Bug.](https://github.com/RonanUFPa/minerva-plataforma/blob/master/.github/ISSUE_TEMPLATE/bug_report.md)
+
 [Programando.](https://github.com/afonsopacifer/open-source-boilerplate/blob/master/CONTRIBUTING.md)
 
