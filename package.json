@@ -5,6 +5,8 @@
   "main": "app.js",
   "homepage": "https://github.com/RonanUFPa/minerva-plataforma",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test especificado\" && exit1"
   },
   "author": "Minerva",
@@ -30,5 +32,8 @@
   },
   "bugs": {
     "url": "https://github.com/RonanUFPa/minerva-plataforma/issues"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
